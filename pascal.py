@@ -35,7 +35,7 @@ class Solution:
             res_arr = [rows-1]
             cur_row = [1] 
             prev_row = res_arr[-1] 
-            for i in range(len(prev_row)-1):
+            for i in range(prev_row)-1):
                 cur_row.append(prev_row[i] + prev_row[i+1]) 
             cur_row += [1] 
             res_arr.append(cur_row)
