@@ -29,18 +29,11 @@ class Solution:
         # return type: list[list[int]]
 
         # TODO: Write code below to return a nested list with the solution to the prompt
-        if rows == 1:
-            return [[1]]
-        else:
-            res_arr = [rows-1]
-            cur_row = [1] 
-            prev_row = res_arr[-1] 
-            for i in range((prev_row)-1):
-                cur_row.append(prev_row[i] + prev_row[i+1]) 
-            cur_row += [1] 
-            res_arr.append(cur_row)
-            return res_arr
+        tri = [[1]]
 
+        for _ in range(rows):
+            tri.append([x+y for x,y in zip(tri[-1] +[0], [0] + tri[-1])])
+        return tri[:rows]
 def main():
     num = int(input())
 
