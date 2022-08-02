@@ -29,7 +29,6 @@ class Solution:
         # return type: list[list[int]]
 
         # TODO: Write code below to return a nested list with the solution to the prompt
-        rows_1=  [int(x) for x in str(rows)]
         if rows_1 == 1:
             return [[1]]
         else:
