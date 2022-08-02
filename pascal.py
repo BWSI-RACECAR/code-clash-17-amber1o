@@ -32,7 +32,7 @@ class Solution:
         if rows == 1:
             return [[1]]
         else:
-            res_arr = pascalTri(rows-1) 
+            res_arr = rows-1
             cur_row = [1] 
             prev_row = res_arr[-1] 
             for i in range(len(prev_row)-1):
