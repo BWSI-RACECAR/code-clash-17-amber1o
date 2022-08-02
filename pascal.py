@@ -29,10 +29,10 @@ class Solution:
         # return type: list[list[int]]
 
         # TODO: Write code below to return a nested list with the solution to the prompt
-        if rows_1 == 1:
+        if rows == 1:
             return [[1]]
         else:
-            res_arr = rows_1-1
+            res_arr = rows-1
             cur_row = [1] 
             prev_row = res_arr[-1] 
             for i in range(len(prev_row)-1):
